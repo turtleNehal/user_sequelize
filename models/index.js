@@ -20,6 +20,7 @@ const db = {}
 db.sequelize = sequelize
 db.Sequelize = Sequelize
 
+db.asset = require('./assetModel')(sequelize,DataTypes)
 db.events = require('./eventModel')(sequelize,DataTypes)
 db.users = require('./userModel')(sequelize,DataTypes)
 

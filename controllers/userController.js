@@ -6,7 +6,7 @@ const Users = db.users
 //create
 
 const addUsers = (async (req, res) => {
-    if (!req.body.id) {
+    if (!req.body.name) {
         res.status(400).send({
             message: "please insert first name"
         })
@@ -14,7 +14,6 @@ const addUsers = (async (req, res) => {
     }
 
     const userInfo = {
-        id: req.body.id,
         name: req.body.name,
         email: req.body.email,
         phonenumber: req.body.phonenumber,

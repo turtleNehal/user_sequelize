@@ -6,7 +6,7 @@ const Events = db.events
 //create
 
 const addEvents = (async (req, res) => {
-    if (!req.body.id) {
+    if (!req.body.name) {
         res.status(400).send({
             message: "please insert id"
         })
@@ -14,7 +14,6 @@ const addEvents = (async (req, res) => {
     }
 
     const eventInfo = {
-        id: req.body.id,
         name: req.body.name,
         description: req.body.description,
         date_of_event: req.body.date_of_event,

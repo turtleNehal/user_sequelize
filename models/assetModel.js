@@ -1,32 +1,21 @@
 module.exports = (sequelize, DataTypes) => {
-    const Event = sequelize.define('events', {
+    const Asset = sequelize.define('asset', {
         
-        
-        name: {
+        asset_url: {
             type: DataTypes.STRING,
             allowNull: false
         },
 
-        description: {
+        asset_name: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        date_of_event: {
+        asset_size: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        no_of_ticket: {
+        asset_type: {
             type: DataTypes.STRING,
-            allowNull: false
-        },
-       
-        cost: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        user_id: {
-            type: DataTypes.STRING,
-            foreignKey: 'user_id',
             allowNull: false
         },
         
@@ -38,5 +27,5 @@ module.exports = (sequelize, DataTypes) => {
         updatedAt: 'updated_at'
     }
     )
-    return Event
+    return Asset
 }
